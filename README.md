@@ -2,18 +2,6 @@
 
 A robust, production-ready **Retrieval-Augmented Generation (RAG)** pipeline and conversational assistant specialized in Indian History. Built with **LangChain**, **LangGraph**, **ChromaDB**, **Groq (Llama 3.3 70B)**, and **NVIDIA AI Foundation Endpoints**, featuring comprehensive evaluation using the **Ragas** framework.
 
----
-
-## 🌟 Key Features
-
-- **Conversational RAG with LangGraph**: State-driven multi-turn dialogue graph maintaining context and chat history across user interactions.
-- **High-Performance LLM Generation**: Powered by `llama-3.3-70b-versatile` via Groq for fast, accurate, and contextually grounded answers.
-- **Semantic Embeddings & Vector Search**: Leverages NVIDIA's `nvidia/nemotron-3-embed-1b` embeddings coupled with persistent ChromaDB storage.
-- **Automated Data Ingestion Pipeline**: Ingests, cleans, deduplicates, and chunks Indian History datasets from Hugging Face (`BashitAli/Indian_history`).
-- **Interactive Streamlit Web UI**: User-friendly chat interface for querying historical events, dynasties, cultures, and figures.
-- **Comprehensive Ragas Evaluation**: End-to-end evaluation suite measuring Faithfulness, Answer Relevancy, Context Precision, Context Recall, and Answer Correctness.
-
----
 
 ## 🏗️ Architecture & Workflow
 
@@ -61,8 +49,6 @@ flowchart TD
 ├── uv.lock                 # Lockfile for reproducible environment setup
 └── README.md               # Project documentation
 ```
-
----
 
 ## 🛠️ Tech Stack
 
@@ -181,15 +167,11 @@ Results are exported to `evaluation_results.csv` and `evaluation_results.xlsx`.
 
 | Parameter | Location | Default Value | Description |
 | :--- | :--- | :--- | :--- |
-| `generator_llm` | [models.py](file:///D:/crew/Rag/models.py) | `llama-3.3-70b-versatile` | Groq chat model for generating responses |
-| `embed_llm` | [models.py](file:///D:/crew/Rag/models.py) | `nvidia/nemotron-3-embed-1b` | Embedding model for vector representation |
-| `chunk_size` | [data_processing.py](file:///D:/crew/Rag/data_processing.py) | `300` | Token/character size per text chunk |
-| `chunk_overlap` | [data_processing.py](file:///D:/crew/Rag/data_processing.py) | `30` | Overlap between adjacent chunks |
-| `k` | [rag.py](file:///D:/crew/Rag/rag.py) | `4` | Top-K documents retrieved per query |
-| `search_type` | [rag.py](file:///D:/crew/Rag/rag.py) | `similarity` | Retrieval search strategy (`similarity`, `mmr`) |
+| `generator_llm` | `llama-3.3-70b-versatile` | Groq chat model for generating responses |
+| `embed_llm` | `nvidia/nemotron-3-embed-1b` | Embedding model for vector representation |
+| `chunk_size` |  `300` | Token/character size per text chunk |
+| `chunk_overlap` |  `30` | Overlap between adjacent chunks |
+| `k` | `4` | Top-K documents retrieved per query |
+| `search_type` | `similarity` | Retrieval search strategy (`similarity`) |
 
 ---
-
-## 📄 License
-
-This project is licensed under the terms specified in the repository.
