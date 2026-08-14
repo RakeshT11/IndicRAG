@@ -1,10 +1,9 @@
 import os
-from typing import List, Optional
+from typing import List
 from datasets import load_dataset, Dataset
 from langchain_core.documents import Document
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 import logging
-import pandas as pd
 logging.basicConfig(level=logging.INFO)
 class Load_data:
     

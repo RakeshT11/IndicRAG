@@ -1,12 +1,6 @@
-import os
-from typing import Any, Dict, List, Optional,Annotated, TypedDict, Sequence
-from langchain_chroma import Chroma
-from langchain_core.documents import Document
+from typing import List, TypedDict
 from langchain_core.output_parsers import StrOutputParser
-# from langchain_core.prompts import PromptTemplate
 from embedding import EmbedData
-# from langchain_core.runnables import  RunnablePassthrough
-# from langchain_core.runnables import RunnableLambda
 from langchain_core.messages import BaseMessage, HumanMessage, AIMessage
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langgraph.graph import StateGraph,START, END
@@ -83,7 +77,7 @@ class RAGPipeline:
             final_messages = result["messages"]
             return final_messages[-1].content
         except Exception as e:
-            logger.error(f"Error invoking workflow: {e}")
+            logging.error(f"Error invoking workflow: {e}")
             return f"Error processing query: {str(e)}"
 
 

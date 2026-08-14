@@ -1,7 +1,6 @@
 import os
 from typing import Optional
 from langchain_chroma import Chroma
-from langchain_nvidia_ai_endpoints import NVIDIAEmbeddings
 from data_processing import Load_data
 from dotenv import load_dotenv
 load_dotenv()
@@ -58,4 +57,4 @@ if __name__ == "__main__":
     embedder = EmbedData()
     vdb = embedder.build_vectordb()
     logging.info(f"VectorDB initialization test complete. Persistence path: {embedder.persist_directory}")
-    print(len(embedder.embeddings.embed_query("hi")))
+    print(embedder.embeddings.embed_query("hi"))

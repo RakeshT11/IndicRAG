@@ -25,6 +25,7 @@ dependencies = [
     "datasets>=5.0.1",
     "vertexai>=1.71.1",
     "langgraph>=1.2.10",
+    "langchain-community>=0.4.2",
 ]
 
 [dependency-groups]

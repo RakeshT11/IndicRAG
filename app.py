@@ -1,7 +1,6 @@
 import streamlit as st
 import logging
-from typing import List, Dict, Any
-from langchain_core.messages import HumanMessage, AIMessage, BaseMessage
+from langchain_core.messages import HumanMessage, AIMessage
 from rag import RAGPipeline
 
 logging.basicConfig(level=logging.INFO)
