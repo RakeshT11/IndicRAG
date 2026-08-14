@@ -166,7 +166,7 @@ Results are exported to `evaluation_results.csv` and `evaluation_results.xlsx`.
 ## ⚙️ Configuration & Customization
 
 | Parameter | Location | Default Value |
-| :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | 
 | `generator_llm` | `llama-3.3-70b-versatile` | Groq chat model for generating responses |
 | `embed_llm` | `nvidia/nemotron-3-embed-1b` | Embedding model for vector representation |
 | `chunk_size` |  `300` | Token/character size per text chunk |
